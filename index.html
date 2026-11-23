@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pastelería en Longchamps | Antojos Del Horno</title>
+<meta name="description" content="Pastelería y cafetería en Longchamps y San Vicente. Tortas, brownies, tartas, mousses y petit fours. Armá tu pedido y mandalo por WhatsApp.">
+<meta name="theme-color" content="#E0698F">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Antojos Del Horno | Pastelería en Longchamps y San Vicente">
+<meta property="og:description" content="Tortas, brownies, tartas, mousses y petit fours. Mirá el catálogo y pedí por WhatsApp.">
+<meta property="og:image" content="img/og.jpg">
+<meta property="og:url" content="https://antojosdelhorno.example/">
+<link rel="icon" type="image/png" sizes="32x32" href="img/favicon.png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script type="application/ld+json">
+[{"@context":"https://schema.org","@type":"Bakery","name":"Antojos Del Horno - Longchamps","url":"https://antojosdelhorno.example/","image":"img/og.jpg","address":{"@type":"PostalAddress","streetAddress":"Presidente Rivadavia 1856","addressLocality":"Longchamps","addressRegion":"Buenos Aires","addressCountry":"AR"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Thursday","Friday","Sunday"],"opens":"16:00","closes":"20:30"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"09:00","closes":"12:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"16:00","closes":"20:30"}],"sameAs":["https://instagram.com/antojosdelhorno"]},
+{"@context":"https://schema.org","@type":"Bakery","name":"Antojos Del Horno - San Vicente","url":"https://antojosdelhorno.example/","image":"img/og.jpg","address":{"@type":"PostalAddress","streetAddress":"Pezoa 99","addressLocality":"San Vicente","addressRegion":"Buenos Aires","addressCountry":"AR"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Thursday","Friday","Saturday","Sunday"],"opens":"09:00","closes":"20:30"}],"sameAs":["https://instagram.com/antojosdelhorno"]}]
+</script>
+</head>
+<body>
+
+<header class="top">
+  <a class="brand" href="#inicio" aria-label="Antojos Del Horno, ir al inicio">
+    <img src="img/logo.webp" alt="Logo de Antojos Del Horno" width="44" height="44">
+    <span>Antojos Del Horno</span>
+  </a>
+  <nav aria-label="Principal">
+    <a href="#catalogo">Catálogo</a>
+    <a href="#como-pedir">Cómo pedir</a>
+    <a href="#locales">Locales</a>
+  </nav>
+  <button class="cart-btn" id="abrirCarrito" type="button" aria-label="Ver mi pedido">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M2 3h3l2.7 12.4a1 1 0 0 0 1 .8h9.2a1 1 0 0 0 1-.8L21 7H6"/></svg>
+    <span class="badge" id="cantCarrito" hidden>0</span>
+  </button>
+</header>
+
+<main id="inicio">
+  <section class="hero">
+    <img class="hero-img" src="img/hero.webp" alt="Mini tortas de limón, frutos rojos y frutilla en bandejas" width="800" height="1067" fetchpriority="high">
+    <div class="hero-in">
+      <p class="kicker" id="heroKicker"></p>
+      <h1>Antojos Del Horno</h1>
+      <p class="lead" id="heroLead"></p>
+      <div class="hero-cta">
+        <a class="btn btn-main" href="#catalogo">Ver el catálogo</a>
+        <a class="btn btn-ghost" id="heroWsp" href="#" target="_blank" rel="noopener">Pedí por WhatsApp</a>
+      </div>
+      <p class="hero-meta" id="heroMeta"></p>
+    </div>
+  </section>
+
+  <section class="sec" id="destacados" aria-labelledby="h-dest">
+    <h2 id="h-dest">Los más pedidos</h2>
+    <div class="rail" id="railDestacados"></div>
+  </section>
+
+  <section class="sec" id="catalogo" aria-labelledby="h-cat">
+    <h2 id="h-cat">Nuestro catálogo</h2>
+    <p class="sub">Tocá “Agregar” y armá tu pedido. Lo mandás por WhatsApp y te confirmamos.</p>
+    <div class="chips" id="chips" role="tablist" aria-label="Categorías"></div>
+    <div class="grid" id="grid"></div>
+  </section>
+
+  <section class="sec alt" id="como-pedir" aria-labelledby="h-como">
+    <h2 id="h-como">Cómo pedir</h2>
+    <ol class="steps">
+      <li><span>1</span><div><strong>Elegí tus antojos</strong><p>Recorré el catálogo y agregá lo que quieras al pedido.</p></div></li>
+      <li><span>2</span><div><strong>Completá tus datos</strong><p>Tu nombre, el local donde retirás y la fecha que lo necesitás.</p></div></li>
+      <li><span>3</span><div><strong>Mandalo por WhatsApp</strong><p>Te llega todo armado y te confirmamos el pedido.</p></div></li>
+    </ol>
+    <p class="note" id="notaPedidos"></p>
+  </section>
+
+  <section class="sec insta" aria-labelledby="h-ig">
+    <h2 id="h-ig">Seguinos en Instagram</h2>
+    <p class="sub" id="igTexto"></p>
+    <a class="btn btn-main" id="igLink" href="#" target="_blank" rel="noopener">Ir a Instagram</a>
+  </section>
+
+  <section class="sec" id="locales" aria-labelledby="h-loc">
+    <h2 id="h-loc">Nuestros locales</h2>
+    <div class="locales" id="locales-lista"></div>
+  </section>
+</main>
+
+<footer class="foot">
+  <img src="img/logo.webp" alt="" width="56" height="56" loading="lazy">
+  <p><strong>Antojos Del Horno</strong> · Cafetería y pastelería</p>
+  <p><a id="footIG" href="#" target="_blank" rel="noopener">@antojosdelhorno</a></p>
+  <p class="credit">© <span id="anio"></span> · <a href="https://vigolowebstudio.com" target="_blank" rel="noopener">Web hecha por Vigolo Web Studio</a></p>
+</footer>
+
+<a class="wsp-float" id="wspFloat" href="#" target="_blank" rel="noopener" aria-label="Escribinos por WhatsApp">
+  <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.2 7.500L3 21l2-5.500A8.400 8.400 0 1 1 21 11.500z"/><path d="M9 9.500c.5 2.500 2.500 4.500 5.500 5.500l1.500-1.500-2-1-1 .8a4 4 0 0 1-1.800-1.800l.8-1-1-2z"/></svg>
+</a>
+
+<dialog id="carrito" aria-labelledby="h-carrito">
+  <form method="dialog" class="dlg-head">
+    <h2 id="h-carrito">Tu pedido</h2>
+    <button class="x" aria-label="Cerrar">✕</button>
+  </form>
+  <div id="carritoVacio" class="vacio">Todavía no agregaste nada. ¡Mirá el catálogo!</div>
+  <ul id="carritoLista" class="c-lista"></ul>
+  <form id="checkout" class="checkout" hidden>
+    <p class="total">Total: <strong id="total"></strong></p>
+    <label>Tu nombre<input name="nombre" required autocomplete="name"></label>
+    <label>Retiro en<select name="sucursal" id="selSucursal" required></select></label>
+    <label>Fecha para retirar<input type="date" name="fecha" id="inpFecha" required></label>
+    <label>Forma de pago<select name="pago" id="selPago" required></select></label>
+    <label>Sabores, mensaje en la torta u otras aclaraciones<textarea name="nota" rows="3" placeholder="Ej: 6 lingotes, 3 de pistacho y 3 de frambuesa"></textarea></label>
+    <p class="aviso" id="avisoAnticipacion"></p>
+    <button class="btn btn-main full" type="submit">Enviar pedido por WhatsApp</button>
+  </form>
+</dialog>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
