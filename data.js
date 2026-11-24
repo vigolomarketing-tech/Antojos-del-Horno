@@ -134,7 +134,7 @@ const CONFIG = {
     titulo: "Pastelería en Longchamps | Antojos Del Horno",
     descripcion: "Pastelería y cafetería en Longchamps y San Vicente. Tortas, brownies, tartas, mousses y petit fours. Armá tu pedido y mandalo por WhatsApp.",
     ogImage: "img/og.jpg",
-    url: "https://antojosdelhorno.example", // PENDIENTE: dominio final
+    url: "https://vigolomarketing-tech.github.io/Antojos-del-Horno/", // PENDIENTE: dominio propio si lo compran
     tipoSchema: "Bakery",
   },
 };
